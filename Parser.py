@@ -4,5 +4,5 @@ file = open("Text.txt", "r")
 for line in file:
   print(line)
 
-file1 = open("Text.txt", "r")
-print(file1.read())
+# file1 = open("Text.txt", "r")
+# print(file1.read())
