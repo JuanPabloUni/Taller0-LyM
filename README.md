@@ -1,1 +1,3 @@
-# Taller0-LyM
+Andrés Fernando Galvis
+
+Juan Pablo Hernández
