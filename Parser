@@ -1,3 +1,5 @@
+alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}"]
+
 file = open("Text.txt", "r")
 for line in file:
   print(line)
