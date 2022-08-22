@@ -12,6 +12,11 @@ def verificador(lineas:list)->bool:
     comparador(lineap)
    
 def comparador(lineacomparada: str)->bool:
+  palabra=""
+  for letra in lineacomparada:
+    palabra+= letra
+    
+    
   pass
 
 # file1 = open("Text.txt", "r")
