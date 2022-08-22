@@ -1,5 +1,5 @@
 alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else"]
-
+metodos=
 def Parser()->bool:
   path = input("\nPorfavor digite el path del archivo: ")
   file = open(path, "r")
@@ -15,8 +15,9 @@ def comparador(lineacomparada: str)->bool:
   palabra=""
   for letra in lineacomparada:
     palabra+= letra
-    if(palabra in alfabeto):
-      
+    if(palabra in metodos):
+      if palabra = "if":
+        compararif()
 
 # file1 = open("Text.txt", "r")
 # print(file1.read())
