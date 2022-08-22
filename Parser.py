@@ -3,8 +3,9 @@ alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od"
 def Parser():
   path = input("\nPorfavor digite el path del archivo: ")
   file = open(path, "r")
+  lineas=[]
   for line in file:
-    print(line)
+    lineas.append(line)
 
 
 # file1 = open("Text.txt", "r")
@@ -16,3 +17,4 @@ def Parser():
 
 print("\nBienvenido al parser de programas de Java\n")
 Parser()
+def verificador(f:str)
