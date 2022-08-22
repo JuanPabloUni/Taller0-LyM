@@ -17,4 +17,4 @@ def Parser():
 
 print("\nBienvenido al parser de programas de Java\n")
 Parser()
-def verificador(f:str)
+def verificador(lineas:list)-bool
