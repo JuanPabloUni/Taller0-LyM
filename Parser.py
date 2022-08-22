@@ -15,9 +15,8 @@ def comparador(lineacomparada: str)->bool:
   palabra=""
   for letra in lineacomparada:
     palabra+= letra
-    
-    
-  pass
+    if(palabra in alfabeto):
+      
 
 # file1 = open("Text.txt", "r")
 # print(file1.read())
