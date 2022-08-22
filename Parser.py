@@ -18,3 +18,5 @@ def Parser():
 print("\nBienvenido al parser de programas de Java\n")
 Parser()
 def verificador(lineas:list)-bool
+  for lineap in lista:
+    comparador(lineap)
