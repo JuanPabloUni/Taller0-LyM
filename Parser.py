@@ -20,19 +20,18 @@ def Parser()->bool:
 def recorrer(lineas:str)->str:
   palabra = ""
   noecontrado=""
-  for indice in range(len(lineas)):
+  indice=0
+  while indice <= len(lineas):
     caracter = lineas[indice]
     palabra+caracter
     for indicea in range(len(metodos)):
       token = metodos[indicea]
       if palabra in token:
-        encontrado.add()
-        bool=comparadormetodos(palabra, indice, lineas)
+        resultado=comparadormetodos(palabra, indice, lineas)
         palabra = ""
-      else:
-        noencontrado.add()
-              
-def comparadormetodos(palabra:str, indice:int, lineas:str)->bool:
+    indice = resultado[1]
+         
+def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
   valor_verdad=False
   if palabra == "drop":
     valor_verdad=comparardrop(lineas, indice)
