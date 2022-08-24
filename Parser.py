@@ -19,7 +19,6 @@ def Parser()->bool:
 
 def recorrer(lineas:str)->str:
   palabra = ""
-  noecontrado=""
   indice=0
   while indice <= len(lineas):
     caracter = lineas[indice]
@@ -64,8 +63,6 @@ def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
     valor_verdad=compararPROG(lineas, indice)
   elif palabra == "PROC":
     valor_verdad=compararPROC(lineas, indice)
-  elif palabra == "do":
-    valor_verdad=comparardo(lineas, indice)
   elif palabra == "go":
     valor_verdad=comparargo(lineas, indice)
   elif palabra == "if":
@@ -112,8 +109,6 @@ def compararPROG(lineas:str, indice:int)->tuple:
   pass  
 def compararPROC(lineas:str, indice:int)->tuple:
   pass
-def comparardo(lineas:str, indice:int)->tuple:
-  pass  
 def comparargo(lineas:str, indice:int)->tuple:
   pass  
 def compararif(lineas:str, indice:int)->tuple:
