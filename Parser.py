@@ -93,9 +93,19 @@ def compararisValid(lineas:str, indice:int)->tuple:
 def compararcanwalkmultiple(lineas:str, indice:int)->tuple:
   pass
 def compararnot(lineas:str, indice:int)->tuple:
-  pass      
-      
-      
+  pass
+def compararPROG(lineas:str, indice:int)->tuple:
+  pass  
+def compararPROC(lineas:str, indice:int)->tuple:
+  pass
+def comparardo(lineas:str, indice:int)->tuple:
+  pass  
+def comparargo(lineas:str, indice:int)->tuple:
+  pass  
+def compararif(lineas:str, indice:int)->tuple:
+  pass  
+def compararGORP(lineas:str, indice:int)->tuple:
+  pass  
 #       # estructuras si no esta sacar el nombre e ir a posicion y evaluar
 #                 """ 
 #             else:
