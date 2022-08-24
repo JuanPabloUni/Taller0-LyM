@@ -2,6 +2,7 @@ alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od"
 metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free", "pop", "PROC", "do", "go",  "if", "GORP", "while", "repeatTimes"]
 condiciones =["isfacing", "isValid", "canWalk","not"]
 
+
 def Parser()->bool:
   path = input("\nPorfavor digite el path del archivo: ")
   file = open(path, "r")
@@ -28,49 +29,49 @@ def recorrer(lineas:str)->str:
     indice += resultado[1]
          
 def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
-  valor_verdad=False
+  tuplaverdadidnice=(False,0)
   if palabra == "drop":
-    valor_verdad=comparardrop(lineas, indice)
+    tuplaverdadidnice=comparardrop(lineas, indice)
   elif palabra == "walkm":
-    valor_verdad=compararwalkmultiple(lineas, indice)    
+    tuplaverdadidnice=compararwalkmultiple(lineas, indice)    
   elif palabra == "jump":
-    valor_verdad=compararjump(lineas, indice)
+    tuplaverdadidnice=compararjump(lineas, indice)
   elif palabra == "jumpTo":
-    valor_verdad=compararjumpTo(lineas, indice) 
+    tuplaverdadidnice=compararjumpTo(lineas, indice) 
   elif palabra == "veer":
-    valor_verdad=compararveer(lineas, indice)
+    tuplaverdadidnice=compararveer(lineas, indice)
   elif palabra == "look":
-    valor_verdad=compararlook(lineas, indice)
+    tuplaverdadidnice=compararlook(lineas, indice)
   elif palabra == "grab":
-    valor_verdad=comparargrab(lineas, indice)
+    tuplaverdadidnice=comparargrab(lineas, indice)
   elif palabra == "get":
-    valor_verdad=compararget(lineas, indice)
+    tuplaverdadidnice=compararget(lineas, indice)
   elif palabra == "free":
-    valor_verdad=compararfree(lineas, indice)      
+    tuplaverdadidnice=compararfree(lineas, indice)      
   elif palabra == "pop":
-    valor_verdad=compararpop(lineas, indice)
+    tuplaverdadidnice=compararpop(lineas, indice)
   elif palabra == "isfacing":
-    valor_verdad=compararisfacing(lineas, indice)
+    tuplaverdadidnice=compararisfacing(lineas, indice)
   elif palabra == "isValid":
-    valor_verdad=compararisValid(lineas, indice)
+    tuplaverdadidnice=compararisValid(lineas, indice)
   elif palabra == "canWalk":
-    valor_verdad=compararcanwalkmultiple(lineas, indice)
+    tuplaverdadidnice=compararcanwalkmultiple(lineas, indice)
   elif palabra == "not":
-    valor_verdad=compararnot(lineas, indice)
+    tuplaverdadidnice=compararnot(lineas, indice)
   elif palabra == "PROG":
-    valor_verdad=compararPROG(lineas, indice)
+    tuplaverdadidnice=compararPROG(lineas, indice)
   elif palabra == "PROC":
-    valor_verdad=compararPROC(lineas, indice)
+    tuplaverdadidnice=compararPROC(lineas, indice)
   elif palabra == "go":
-    valor_verdad=comparargo(lineas, indice)
+    tuplaverdadidnice=comparargo(lineas, indice)
   elif palabra == "if":
-    valor_verdad=compararif(lineas, indice)
+    tuplaverdadidnice=compararif(lineas, indice)
   elif palabra == "GORP":
-    valor_verdad=compararGORP(lineas, indice)
+    tuplaverdadidnice=compararGORP(lineas, indice)
   elif palabra == "while":
-    valor_verdad=compararwhile(lineas, indice)
+    tuplaverdadidnice=compararwhile(lineas, indice)
   elif palabra == "repeatTimes":
-    valor_verdad=compararrepeatTimes(lineas, indice)
+    tuplaverdadidnice=compararrepeatTimes(lineas, indice)
   else:
     valor_verdad=False
   return valor_verdad  
