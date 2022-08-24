@@ -68,10 +68,7 @@ def Parser()->bool:
    
   
 
-  def compararisfacing(lineas:string, indice:int)
-  def compararisValid(lineas:string, indice:int)
-  def compararcanwalkmultiple(lineas:string, indice:int)
-  def compararnot(lineas:string, indice:int)
+
   
   def comparardrop(lineas:string, indice:int)->bool:
   def compararwalkmultiple(lineas:string, indice:int)->bool:
@@ -83,6 +80,10 @@ def Parser()->bool:
   def compararget(lineas:string, indice:int)->bool:
   def compararfree(lineas:string, indice:int)->bool:
   def compararpop(lineas:string, indice:int)->bool:
+  def compararisfacing(lineas:string, indice:int)->bool:
+  def compararisValid(lineas:string, indice:int)->bool:
+  def compararcanwalkmultiple(lineas:string, indice:int)->bool:
+  def compararnot(lineas:string, indice:int)->bool:
   
       
       
