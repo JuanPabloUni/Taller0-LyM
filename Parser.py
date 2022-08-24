@@ -27,41 +27,41 @@ def Parser()->bool:
          token = cadena[indicea]
          if palabra in token:
            encontrado.add()
-           bool=comparadormetodos(palabra, indice)
+           bool=comparadormetodos(palabra, indice, )
            palabra = ""
          else:
            noencontrado.add()
               
-  def comparadormetodos(palabra:str, indice:int)->bool:
+  def comparadormetodos(palabra:str, indice:int, lineas:str)->bool:
     valor_verdad=False
     if palabra == "drop":
-      valor_verdad=comparardrop(lineas:string, indice:int)
+      valor_verdad=comparardrop(lineas:str, indice:int)
     elif palabra == "walkm":
-      valor_verdad=compararwalkmultiple(lineas:string, indice:int)    
+      valor_verdad=compararwalkmultiple(lineas:str, indice:int)    
     elif palabra == "jump":
-      valor_verdad=compararjump(lineas:string, indice:int)
+      valor_verdad=compararjump(lineas:str, indice:int)
     elif palabra == "jumpTo":
-      valor_verdad=compararjumpTo(lineas:string, indice:int) 
+      valor_verdad=compararjumpTo(lineas:str, indice:int) 
     elif palabra == "veer":
-      valor_verdad=compararveer(lineas:string, indice:int)
+      valor_verdad=compararveer(lineas:str, indice:int)
     elif palabra == "look":
-      valor_verdad=compararlook(lineas:string, indice:int)
+      valor_verdad=compararlook(lineas:str, indice:int)
     elif palabra == "grab":
-      valor_verdad=comparargrab(lineas:string, indice:int)
+      valor_verdad=comparargrab(lineas:str, indice:int)
     elif palabra == "get":
-      valor_verdad=compararget(lineas:string, indice:int)
+      valor_verdad=compararget(lineas:str, indice:int)
     elif palabra == "free":
-      valor_verdad=compararfree(lineas:string, indice:int)      
+      valor_verdad=compararfree(lineas:str, indice:int)      
     elif palabra == "pop":
-      valor_verdad=compararpop(lineas:string, indice:int)
+      valor_verdad=compararpop(lineas:str, indice:int)
     elif palabra == "isfacing":
-      valor_verdad=compararisfacing(lineas:string, indice:int)
+      valor_verdad=compararisfacing(lineas:str, indice:int)
     elif palabra == "isValid":
-      valor_verdad=compararisValid(lineas:string, indice:int)
+      valor_verdad=compararisValid(lineas:str, indice:int)
     elif palabra == "canWalk":
-      valor_verdad=compararcanwalkmultiple(lineas:string, indice:int)
+      valor_verdad=compararcanwalkmultiple(lineas:str, indice:int)
     elif palabra == "not":
-      valor_verdad=compararnot(lineas:string, indice:int)
+      valor_verdad=compararnot(lineas:str, indice:int)
     else:
       valor_verdad=False
     return valor_verdad  
@@ -70,20 +70,34 @@ def Parser()->bool:
 
 
   
-  def comparardrop(lineas:string, indice:int)->bool:
-  def compararwalkmultiple(lineas:string, indice:int)->bool:
-  def compararjump(lineas:string, indice:int)->bool:
-  def compararjumpTo(lineas:string, indice:int)->bool:
-  def compararveer(lineas:string, indice:int)->bool:
-  def compararlook(lineas:string, indice:int)->bool:
-  def comparargrab(lineas:string, indice:int)->bool:
-  def compararget(lineas:string, indice:int)->bool:
-  def compararfree(lineas:string, indice:int)->bool:
-  def compararpop(lineas:string, indice:int)->bool:
-  def compararisfacing(lineas:string, indice:int)->bool:
-  def compararisValid(lineas:string, indice:int)->bool:
-  def compararcanwalkmultiple(lineas:string, indice:int)->bool:
-  def compararnot(lineas:string, indice:int)->bool:
+  def comparardrop(lineas:str, indice:int)->tuple:
+    pass
+  def compararwalkmultiple(lineas:str, indice:int)->tuple:
+    pass
+  def compararjump(lineas:str, indice:int)->tuple:
+    pass
+  def compararjumpTo(lineas:str, indice:int)->tuple:
+    pass
+  def compararveer(lineas:str, indice:int)->tuple:
+    pass
+  def compararlook(lineas:str, indice:int)->tuple:
+    pass
+  def comparargrab(lineas:str, indice:int)->tuple:
+    pass
+  def compararget(lineas:str, indice:int)->tuple:
+    pass
+  def compararfree(lineas:str, indice:int)->tuple:
+    pass
+  def compararpop(lineas:str, indice:int)->tuple:
+    pass
+  def compararisfacing(lineas:str, indice:int)->tuple:
+    pass
+  def compararisValid(lineas:str, indice:int)->tuple:
+    pass
+  def compararcanwalkmultiple(lineas:str, indice:int)->tuple:
+    pass
+  def compararnot(lineas:str, indice:int)->tuple:
+    pass
   
       
       
@@ -99,7 +113,7 @@ def Parser()->bool:
       
       
       
-      estructuras si no esta sacar el nombre e ir a posicion y evaluar
+      # estructuras si no esta sacar el nombre e ir a posicion y evaluar
       
       
       
