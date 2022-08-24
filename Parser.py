@@ -24,7 +24,7 @@ def recorrer(lineas:str)->str:
     caracter = lineas[indice]
     palabra+caracter
     for indicea in range(len(metodos)):
-      token = cadena[indicea]
+      token = metodos[indicea]
       if palabra in token:
         encontrado.add()
         bool=comparadormetodos(palabra, indice, )
