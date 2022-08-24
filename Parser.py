@@ -27,7 +27,7 @@ def recorrer(lineas:str)->str:
       token = metodos[indicea]
       if palabra in token:
         encontrado.add()
-        bool=comparadormetodos(palabra, indice, )
+        bool=comparadormetodos(palabra, indice, lineas)
         palabra = ""
       else:
         noencontrado.add()
