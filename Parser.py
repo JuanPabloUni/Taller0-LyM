@@ -29,49 +29,49 @@ def recorrer(lineas:str)->str:
     indice += resultado[1]
          
 def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
-  tuplaverdadidnice=(False,0)
+  tuplaverdadindice=(False,0)
   if palabra == "drop":
-    tuplaverdadidnice=comparardrop(lineas, indice)
+    tuplaverdadindice=comparardrop(lineas, indice)
   elif palabra == "walkm":
-    tuplaverdadidnice=compararwalkmultiple(lineas, indice)    
+    tuplaverdadindice=compararwalkmultiple(lineas, indice)    
   elif palabra == "jump":
-    tuplaverdadidnice=compararjump(lineas, indice)
+    tuplaverdadindice=compararjump(lineas, indice)
   elif palabra == "jumpTo":
-    tuplaverdadidnice=compararjumpTo(lineas, indice) 
+    tuplaverdadindice=compararjumpTo(lineas, indice) 
   elif palabra == "veer":
-    tuplaverdadidnice=compararveer(lineas, indice)
+    tuplaverdadindice=compararveer(lineas, indice)
   elif palabra == "look":
-    tuplaverdadidnice=compararlook(lineas, indice)
+    tuplaverdadindice=compararlook(lineas, indice)
   elif palabra == "grab":
-    tuplaverdadidnice=comparargrab(lineas, indice)
+    tuplaverdadindice=comparargrab(lineas, indice)
   elif palabra == "get":
-    tuplaverdadidnice=compararget(lineas, indice)
+    tuplaverdadindice=compararget(lineas, indice)
   elif palabra == "free":
-    tuplaverdadidnice=compararfree(lineas, indice)      
+    tuplaverdadindice=compararfree(lineas, indice)      
   elif palabra == "pop":
-    tuplaverdadidnice=compararpop(lineas, indice)
+    tuplaverdadindice=compararpop(lineas, indice)
   elif palabra == "isfacing":
-    tuplaverdadidnice=compararisfacing(lineas, indice)
+    tuplaverdadindice=compararisfacing(lineas, indice)
   elif palabra == "isValid":
-    tuplaverdadidnice=compararisValid(lineas, indice)
+    tuplaverdadindice=compararisValid(lineas, indice)
   elif palabra == "canWalk":
-    tuplaverdadidnice=compararcanwalkmultiple(lineas, indice)
+    tuplaverdadindice=compararcanwalkmultiple(lineas, indice)
   elif palabra == "not":
-    tuplaverdadidnice=compararnot(lineas, indice)
+    tuplaverdadindice=compararnot(lineas, indice)
   elif palabra == "PROG":
-    tuplaverdadidnice=compararPROG(lineas, indice)
+    tuplaverdadindice=compararPROG(lineas, indice)
   elif palabra == "PROC":
-    tuplaverdadidnice=compararPROC(lineas, indice)
+    tuplaverdadindice=compararPROC(lineas, indice)
   elif palabra == "go":
-    tuplaverdadidnice=comparargo(lineas, indice)
+    tuplaverdadindice=comparargo(lineas, indice)
   elif palabra == "if":
-    tuplaverdadidnice=compararif(lineas, indice)
+    tuplaverdadindice=compararif(lineas, indice)
   elif palabra == "GORP":
-    tuplaverdadidnice=compararGORP(lineas, indice)
+    tuplaverdadindice=compararGORP(lineas, indice)
   elif palabra == "while":
-    tuplaverdadidnice=compararwhile(lineas, indice)
+    tuplaverdadindice=compararwhile(lineas, indice)
   elif palabra == "repeatTimes":
-    tuplaverdadidnice=compararrepeatTimes(lineas, indice)
+    tuplaverdadindice=compararrepeatTimes(lineas, indice)
   else:
     valor_verdad=False
   return valor_verdad  
