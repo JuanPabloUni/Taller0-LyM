@@ -29,7 +29,7 @@ def recorrer(lineas:str)->str:
       if palabra in token:
         resultado=comparadormetodos(palabra, indice, lineas)
         palabra = ""
-    indice = resultado[1]
+    indice += resultado[1]
          
 def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
   valor_verdad=False
