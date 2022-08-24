@@ -1,5 +1,5 @@
 alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else"]
-metodos=["drop", "free", "walk", "PROC","canWalk", "do", "walk", "od", "fi", "go", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if"]
+metodos=["drop", "free", "walk", "PROC","canWalk", "do", "walk", "od", "fi", "go", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "isfacing", "isValid", "canWalk", "not"]
 encontrado =[]
 noencontrado=[]
 programas = []
@@ -35,33 +35,33 @@ def recorrer(lineas:str)->str:
 def comparadormetodos(palabra:str, indice:int, lineas:str)->bool:
   valor_verdad=False
   if palabra == "drop":
-    valor_verdad=comparardrop(lineas:str, indice:int)
+    valor_verdad=comparardrop(lineas, indice)
   elif palabra == "walkm":
-    valor_verdad=compararwalkmultiple(lineas:str, indice:int)    
+    valor_verdad=compararwalkmultiple(lineas, indice)    
   elif palabra == "jump":
-    valor_verdad=compararjump(lineas:str, indice:int)
+    valor_verdad=compararjump(lineas, indice)
   elif palabra == "jumpTo":
-    valor_verdad=compararjumpTo(lineas:str, indice:int) 
+    valor_verdad=compararjumpTo(lineas, indice) 
   elif palabra == "veer":
-    valor_verdad=compararveer(lineas:str, indice:int)
+    valor_verdad=compararveer(lineas, indice)
   elif palabra == "look":
-    valor_verdad=compararlook(lineas:str, indice:int)
+    valor_verdad=compararlook(lineas, indice)
   elif palabra == "grab":
-    valor_verdad=comparargrab(lineas:str, indice:int)
+    valor_verdad=comparargrab(lineas, indice)
   elif palabra == "get":
-    valor_verdad=compararget(lineas:str, indice:int)
+    valor_verdad=compararget(lineas, indice)
   elif palabra == "free":
-    valor_verdad=compararfree(lineas:str, indice:int)      
+    valor_verdad=compararfree(lineas, indice)      
   elif palabra == "pop":
-    valor_verdad=compararpop(lineas:str, indice:int)
+    valor_verdad=compararpop(lineas, indice)
   elif palabra == "isfacing":
-    valor_verdad=compararisfacing(lineas:str, indice:int)
+    valor_verdad=compararisfacing(lineas, indice)
   elif palabra == "isValid":
-    valor_verdad=compararisValid(lineas:str, indice:int)
+    valor_verdad=compararisValid(lineas, indice)
   elif palabra == "canWalk":
-    valor_verdad=compararcanwalkmultiple(lineas:str, indice:int)
+    valor_verdad=compararcanwalkmultiple(lineas, indice)
   elif palabra == "not":
-    valor_verdad=compararnot(lineas:str, indice:int)
+    valor_verdad=compararnot(lineas, indice)
   else:
     valor_verdad=False
   return valor_verdad  
