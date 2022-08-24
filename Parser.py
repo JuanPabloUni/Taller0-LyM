@@ -114,20 +114,25 @@ def compararif(lineas:str, indice:int)->tuple:
   pass  
 def compararGORP(lineas:str, indice:int)->tuple:
   pass
+
 def compararwhile(lineas:str, indice:int)->tuple:
-  sintaxis = false
+  sintaxis = False
+  flag = False
   longitudcondicional=9
   palabra=""
   if lineas[indice+1]=="(":
+    indice+=1
+    while indice <= indice+9 and not flag:
+      palabra+=lineas[indice]
+      if(palabra in condiciones):
+        flag = True
+        sintaxis = compararcondicionales(lineas, indice, palabra)
       indice+=1
-    while indice <= indice+9:
-      
   else:
-    sintaxis = false
-  pass
+    sintaxis = False
+
 def compararrepeatTimes(lineas:str, indice:int)->tuple:
   pass
-
 #       # estructuras si no esta sacar el nombre e ir a posicion y evaluar
 #                 """ 
 #             else:
