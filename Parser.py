@@ -29,8 +29,7 @@ def Parser()->bool:
            encontrado.add()
            bool=comparadormetodos(palabra, indice, )
            palabra = ""
-         else:
-           noencontrado.add()
+
               
   def comparadormetodos(palabra:str, indice:int, lineas:str)->bool:
     valor_verdad=False
