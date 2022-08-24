@@ -1,5 +1,5 @@
 alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else"]
-metodos=[]
+metodos=["drop", "free", "walk", "PROC","canWalk", "do", "walk", "od", "fi", "go", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if"]
 encontrado =[]
 noencontrado=[]
 programas = []
