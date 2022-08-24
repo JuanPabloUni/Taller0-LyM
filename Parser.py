@@ -28,7 +28,6 @@ def recorrer(lineas:str)->str:
       token = metodos[indicea]
       if palabra in token:
         resultado=comparadormetodos(palabra, indice, lineas)
-        palabra = ""
     indice += resultado[1]
          
 def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
