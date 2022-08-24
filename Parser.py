@@ -21,9 +21,9 @@ def Parser()->bool:
      palabra = ""
      noecontrado=""
      for indice in range(len(lineas)):
-       caracter = cadena[indice]
+       caracter = lineas[indice]
        palabra+caracter
-       for indicea in range(len(alfabeto)):
+       for indicea in range(len(metodos)):
          token = cadena[indicea]
          if palabra in token:
            encontrado.add()
