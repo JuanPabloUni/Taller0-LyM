@@ -104,6 +104,10 @@ def compararif(lineas:str, indice:int)->tuple:
   pass  
 def compararGORP(lineas:str, indice:int)->tuple:
   pass
+def compararwhile(lineas:str, indice:int)->tuple:
+  pass
+def compararrepeatTimes(lineas:str, indice:int)->tuple:
+  pass
 
 #       # estructuras si no esta sacar el nombre e ir a posicion y evaluar
 #                 """ 
