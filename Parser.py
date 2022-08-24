@@ -104,7 +104,8 @@ def comparargo(lineas:str, indice:int)->tuple:
 def compararif(lineas:str, indice:int)->tuple:
   pass  
 def compararGORP(lineas:str, indice:int)->tuple:
-  pass  
+  pass
+
 #       # estructuras si no esta sacar el nombre e ir a posicion y evaluar
 #                 """ 
 #             else:
