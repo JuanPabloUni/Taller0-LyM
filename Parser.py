@@ -60,6 +60,22 @@ def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
     valor_verdad=compararcanwalkmultiple(lineas, indice)
   elif palabra == "not":
     valor_verdad=compararnot(lineas, indice)
+  elif palabra == "PROG":
+    valor_verdad=compararPROG(lineas, indice)
+  elif palabra == "PROC":
+    valor_verdad=compararPROC(lineas, indice)
+  elif palabra == "do":
+    valor_verdad=comparardo(lineas, indice)
+  elif palabra == "go":
+    valor_verdad=comparargo(lineas, indice)
+  elif palabra == "if":
+    valor_verdad=compararif(lineas, indice)
+  elif palabra == "GORP":
+    valor_verdad=compararGORP(lineas, indice)
+  elif palabra == "while":
+    valor_verdad=compararwhile(lineas, indice)
+  elif palabra == "repeatTimes":
+    valor_verdad=compararrepeatTimes(lineas, indice)
   else:
     valor_verdad=False
   return valor_verdad  
