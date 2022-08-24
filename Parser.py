@@ -2,7 +2,6 @@ alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od"
 metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free", "pop", "isfacing", "isValid", "canWalk","not", "PROC", "do", "go",  "if", "GORP", "while", "repeatTimes"]
 condiciones =["isfacing", "isValid", "canWalk","not"]
 
-
 def Parser()->bool:
   path = input("\nPorfavor digite el path del archivo: ")
   file = open(path, "r")
