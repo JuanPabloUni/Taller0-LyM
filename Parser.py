@@ -89,7 +89,6 @@ def comparardrop(lineas:str, indice:int)->tuple:
     while indice3 <= indice3+2 :
       for indicevar in variables:
         for indicepar on parametros:
-          indice3 = indice2+1
           palabra+=lineas[indice3]
             if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
             longitudactual = lineas[indice3+len(palabra)]
@@ -121,7 +120,6 @@ def compararwalksimple(lineas, indice)->tuple:
     while indice3 <= indice3+2 :
       for indicevar in variables:
         for indicepar on parametros:
-          indice3 = indice2+1
           palabra+=lineas[indice3]
             if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
             longitudactual = lineas[indice3+len(palabra)]
@@ -138,15 +136,13 @@ def compararwalkcompuesto(lineas, indice)->tuple:
   palabra =""
   indice3 = indice2+1
   if lineas[indice2+1]=="(":
-    while indice3 <= indice3+2 :
-      for indicevar in variables:
-        for indicepar on parametros:
-          indice3 = indice2+1
-          palabra+=lineas[indice3]
-            if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
-            longitudactual = lineas[indice3+len(palabra)]
-              if lineas[len(longitudactual)+1]==")"
-                sintaxis = True
+    while indice3 <= indice3+5 :
+      for indicewalk in walk:
+        palabra+=lineas[indice3]
+          if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
+          longitudactual = lineas[indice3+len(palabra)]
+            if lineas[len(longitudactual)+1]==")"
+              sintaxis = True
     indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
@@ -161,7 +157,6 @@ def compararjump(lineas:str, indice:int)->tuple:
     while indice3 <= indice3+2 :
       for indicevar in variables:
         for indicepar on parametros:
-          indice3 = indice2+1
           palabra+=lineas[indice3]
             if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
             longitudactual = lineas[indice3+len(palabra)]
@@ -202,7 +197,6 @@ def comparargrab(lineas:str, indice:int)->tuple:
     while indice3 <= indice3+2 :
       for indicevar in variables:
         for indicepar on parametros:
-          indice3 = indice2+1
           palabra+=lineas[indice3]
             if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
             longitudactual = lineas[indice3+len(palabra)]
@@ -222,7 +216,6 @@ def compararget(lineas:str, indice:int)->tuple:
     while indice3 <= indice3+2 :
       for indicevar in variables:
         for indicepar on parametros:
-          indice3 = indice2+1
           palabra+=lineas[indice3]
             if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
             longitudactual = lineas[indice3+len(palabra)]
@@ -242,7 +235,6 @@ def compararfree(lineas:str, indice:int)->tuple:
     while indice3 <= indice3+2 :
       for indicevar in variables:
         for indicepar on parametros:
-          indice3 = indice2+1
           palabra+=lineas[indice3]
             if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
             longitudactual = lineas[indice3+len(palabra)]
@@ -262,7 +254,6 @@ def compararpop(lineas:str, indice:int)->tuple:
     while indice3 <= indice3+2 :
       for indicevar in variables:
         for indicepar on parametros:
-          indice3 = indice2+1
           palabra+=lineas[indice3]
             if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
             longitudactual = lineas[indice3+len(palabra)]
