@@ -96,6 +96,7 @@ def compararjump(lineas:str, indice:int)->tuple:
                 longitudactual = lineas[indice3+len(palabra)]
                 if lineas[len(longitudactual)+1]==")"
                   sintaxis = True
+          indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return 
@@ -105,14 +106,19 @@ def compararjumpTo(lineas:str, indice:int)->tuple:
   pass
 def compararveer(lineas:str, indice:int)->tuple:
   sintaxis = False
-  if lineas[indice+1]=="(":
-    for indicevar in listaveer:
-      if lineas[indice+2] == indicepar:
-        variable = lineas[indice+2]
-        if lineas[indice+3]==")"
-          sintaxis = True
-  longitud = len(variable)
-  tupla =(indice+2+longitud,sintaxis)
+  indice2=indice+1
+  palabra=""
+  if lineas[indice2]=="(":
+    while indice2<=indice2+6:    
+      for indicevar in listaveer:
+        palabra+=lineas[indice2]
+        if palabra == indicevar:
+          longitudtemp = lineas[indice2+len(palabra)]
+          if lineas[longitudtemp+1]==")"
+            sintaxis = True
+      indice2+=1    
+  longitud = len(longitudtemp+1)
+  tupla =(longitud,sintaxis)
   pass
 def compararlook(lineas:str, indice:int)->tuple:
   pass
