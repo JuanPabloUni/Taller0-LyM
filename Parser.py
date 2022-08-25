@@ -83,7 +83,7 @@ def comparardrop(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
-  indice3 = indice2
+  indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
@@ -115,6 +115,7 @@ def compararwalksimple(lineas, indice)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
@@ -137,6 +138,7 @@ def compararjump(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
@@ -177,6 +179,7 @@ def comparargrab(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
@@ -191,10 +194,12 @@ def comparargrab(lineas:str, indice:int)->tuple:
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
+
 def compararget(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
@@ -209,10 +214,12 @@ def compararget(lineas:str, indice:int)->tuple:
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
+
 def compararfree(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
@@ -232,6 +239,7 @@ def compararpop(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
