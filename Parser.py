@@ -29,7 +29,8 @@ def recorrer(lineas:str)->str:
       if palabra in token:
         resultado=comparadormetodos(palabra, indice, lineas)
     indice += resultado[1]
-         
+    indice+=1
+    
 def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
   tuplaverdadindice=(False,0)
   if palabra == "drop":
@@ -87,16 +88,16 @@ def compararjump(lineas:str, indice:int)->tuple:
   sintaxis = False
   palabra =""
   if lineas[indice2+1]=="(":
-    for indicevar in variables:
-      for indicepar on parametros:
-        indice3 = indice2+1
-        while indice3 <= indice3+2 :
+    while indice3 <= indice3+2 :
+      for indicevar in variables:
+        for indicepar on parametros:
+          indice3 = indice2+1
           palabra+=lineas[indice3]
-              if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
-                longitudactual = lineas[indice3+len(palabra)]
-                if lineas[len(longitudactual)+1]==")"
-                  sintaxis = True
-          indice3+=1
+            if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
+            longitudactual = lineas[indice3+len(palabra)]
+              if lineas[len(longitudactual)+1]==")"
+                sintaxis = True
+    indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return 
