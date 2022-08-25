@@ -90,7 +90,7 @@ def comparardrop(lineas:str, indice:int)->tuple:
       for indicevar in variables:
         for indicepar in parametros:
           palabra+=lineas[indice3]
-          if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
+          if  palabra== indicepar or palabra == indicevar or palabra.isdigit()==True:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
