@@ -89,13 +89,14 @@ def compararjump(lineas:str, indice:int)->tuple:
   if lineas[indice2+1]=="(":
     for indicevar in variables:
       for indicepar on parametros:
-        while caract <= indice+6:
-          palabra+=lineas[indice]
+        indice3 = indice2+1
+        while indice3 <= indice3+2 :
+          palabra+=lineas[indice3]
               if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
-                variable = lineas[indice2+len(palabra)]
-                if lineas[len(variable)+1]==")"
+                longitudactual = lineas[indice3+len(palabra)]
+                if lineas[len(longitudactual)+1]==")"
                   sintaxis = True
-  longitud = len(variable+1)
+  longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return 
     
