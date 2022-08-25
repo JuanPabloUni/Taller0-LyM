@@ -105,7 +105,7 @@ def compararwalkmultiple(lineas:str, indice:int)->tuple:
     tuplasimple = compararwalksimple(lineas, indice)
   else:
     tuplacompuesta = compararwalkcompuesto(lineas, indice)
-  if tuplasimple[0]==False or tuplacompuesta[0]=False
+  if tuplasimple[0]==False or tuplacompuesta[0]==False:
     bool=False
   indicefinal =indice
   tupla= (True,indicefinal)
