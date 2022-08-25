@@ -130,7 +130,7 @@ def compararwalksimple(lineas, indice)->tuple:
   return tupla
 
 def compararwalkcompuesto(lineas, indice)->tuple:
-
+  pass
 
 def compararjump(lineas:str, indice:int)->tuple:
   indice2= indice
