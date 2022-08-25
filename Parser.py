@@ -310,6 +310,7 @@ def compararwhile(lineas:str, indice:int)->tuple:
 
 def compararrepeatTimes(lineas:str, indice:int)->tuple:
   pass
+
 #       # estructuras si no esta sacar el nombre e ir a posicion y evaluar
 #                 """ 
 #             else:
