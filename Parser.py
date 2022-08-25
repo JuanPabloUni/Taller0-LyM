@@ -117,7 +117,7 @@ def compararwalksimple(lineas, indice)->tuple:
   palabra =""
   indice3 = indice2+1
   if lineas[indice2+1]=="(":
-    while indice3 <= indice3+2 :
+    while indice3 <= indice3+2:
       for indicevar in variables:
         for indicepar on parametros:
           palabra+=lineas[indice3]
@@ -134,6 +134,7 @@ def compararwalkcompuesto(lineas, indice)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  palabra2=""
   indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+5 :
@@ -142,9 +143,16 @@ def compararwalkcompuesto(lineas, indice)->tuple:
           if  palabra== indicewalk:
           longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==","
-              longitudactual+=1
-                for 
-                sintaxis = True
+              longitudactual+=2
+                while longitudactual<=longitudactual+1:
+                  palabra2+=lineas[longitudactual]
+                    for indicevar in variables:
+                      for indicepar on parametros:
+                        if  palabra2== indicepar or palabra2 == indicevar or isDigit(palabra2)==True:
+                          longitudactual = lineas[indice3+len(palabra)]
+                          if lineas[len(longitudactual)+1]==")"
+                            sintaxis = True
+                          sintaxis = True
     indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
