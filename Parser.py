@@ -3,6 +3,7 @@ metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free"
 condiciones =["isfacing", "isValid", "canWalk", "not"]
 variables=[]
 parametros=[]
+walk=["north", "south", "east", "west","right", "left", "front", "back"]
 listaveer=["right", "left","around"]
 
 def Parser()->bool:
@@ -132,7 +133,24 @@ def compararwalksimple(lineas, indice)->tuple:
   return tupla
 
 def compararwalkcompuesto(lineas, indice)->tuple:
-  pass
+  indice2= indice
+  sintaxis = False
+  palabra =""
+  indice3 = indice2+1
+  if lineas[indice2+1]=="(":
+    while indice3 <= indice3+2 :
+      for indicevar in variables:
+        for indicepar on parametros:
+          indice3 = indice2+1
+          palabra+=lineas[indice3]
+            if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
+            longitudactual = lineas[indice3+len(palabra)]
+              if lineas[len(longitudactual)+1]==")"
+                sintaxis = True
+    indice3+=1
+  longitud = len(longitudactual+1)
+  tupla =(longitud,sintaxis)
+  return tupla
 
 def compararjump(lineas:str, indice:int)->tuple:
   indice2= indice
