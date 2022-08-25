@@ -90,7 +90,7 @@ def compararjump(lineas:str, indice:int)->tuple:
         if lineas[indice+2] == indicepar or lineas[indice+2] == indicevar or type(lineas[indice+2])==int:
           variable = lineas[indice+2]
           if lineas[indice+3]==")"
-          sintaxis = True
+            sintaxis = True
   longitud = len(variable)
   tupla =(indice+2+longitud,sintaxis)
   return 
@@ -101,11 +101,11 @@ def compararjumpTo(lineas:str, indice:int)->tuple:
 def compararveer(lineas:str, indice:int)->tuple:
   sintaxis = False
   if lineas[indice+1]=="(":
-    for indicevar in variables:
-      for indicepar on parametros:
-        if lineas[indice+2] == indicepar or lineas[indice+2] == indicevar or type(lineas[indice+2])==int:
-          variable = lineas[indice+2]
-          if lineas[indice+3]==")"
+    for indicevar in listaveer:
+
+      if lineas[indice+2] == indicepar:
+        variable = lineas[indice+2]
+        if lineas[indice+3]==")"
           sintaxis = True
   longitud = len(variable)
   tupla =(indice+2+longitud,sintaxis)
