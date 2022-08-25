@@ -83,6 +83,7 @@ def comparardrop(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
+  indice3 = indice2
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
       for indicevar in variables:
