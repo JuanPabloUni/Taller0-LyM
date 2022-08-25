@@ -83,16 +83,20 @@ def comparardrop(lineas:str, indice:int)->tuple:
 def compararwalkmultiple(lineas:str, indice:int)->tuple:
   pass
 def compararjump(lineas:str, indice:int)->tuple:
+  indice2= indice
   sintaxis = False
-  if lineas[indice+1]=="(":
+  palabra =""
+  if lineas[indice2+1]=="(":
     for indicevar in variables:
       for indicepar on parametros:
-        if lineas[indice+2] == indicepar or lineas[indice+2] == indicevar or type(lineas[indice+2])==int:
-          variable = lineas[indice+2]
-          if lineas[indice+3]==")"
-            sintaxis = True
-  longitud = len(variable)
-  tupla =(indice+2+longitud,sintaxis)
+        while caract <= indice+6:
+          palabra+=lineas[indice]
+              if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
+                variable = lineas[indice2+len(palabra)]
+                if lineas[len(variable)+1]==")"
+                  sintaxis = True
+  longitud = len(variable+1)
+  tupla =(longitud,sintaxis)
   return 
     
   pass
@@ -102,7 +106,6 @@ def compararveer(lineas:str, indice:int)->tuple:
   sintaxis = False
   if lineas[indice+1]=="(":
     for indicevar in listaveer:
-
       if lineas[indice+2] == indicepar:
         variable = lineas[indice+2]
         if lineas[indice+3]==")"
