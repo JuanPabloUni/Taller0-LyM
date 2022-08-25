@@ -1,8 +1,9 @@
-alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else"]
+alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else", "around"]
 metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free", "pop", "PROC", "do", "go",  "if", "GORP", "while", "repeatTimes"]
 condiciones =["isfacing", "isValid", "canWalk", "not"]
 variables=[]
 parametros=[]
+listaveer=["right", "left","around"]
 
 def Parser()->bool:
   path = input("\nPorfavor digite el path del archivo: ")
@@ -98,6 +99,16 @@ def compararjump(lineas:str, indice:int)->tuple:
 def compararjumpTo(lineas:str, indice:int)->tuple:
   pass
 def compararveer(lineas:str, indice:int)->tuple:
+  sintaxis = False
+  if lineas[indice+1]=="(":
+    for indicevar in variables:
+      for indicepar on parametros:
+        if lineas[indice+2] == indicepar or lineas[indice+2] == indicevar or type(lineas[indice+2])==int:
+          variable = lineas[indice+2]
+          if lineas[indice+3]==")"
+          sintaxis = True
+  longitud = len(variable)
+  tupla =(indice+2+longitud,sintaxis)
   pass
 def compararlook(lineas:str, indice:int)->tuple:
   pass
