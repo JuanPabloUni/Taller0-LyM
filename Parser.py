@@ -153,7 +153,7 @@ def compararwalkcompuesto(lineas, indice)->tuple:
                           if lineas[len(longitudactual3)+1]==")"
                             sintaxis = True
     indice3+=1
-  longitud = len(longitudactual+1)
+  longitud = len(longitudactual3+1)
   tupla =(longitud,sintaxis)
   return tupla
 
