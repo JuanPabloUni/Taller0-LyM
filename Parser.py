@@ -194,6 +194,7 @@ def compararfree(lineas:str, indice:int)->tuple:
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
+
 def compararpop(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
@@ -212,6 +213,7 @@ def compararpop(lineas:str, indice:int)->tuple:
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
+
 def compararisfacing(lineas:str, indice:int)->tuple:
   pass
 def compararisValid(lineas:str, indice:int)->tuple:
