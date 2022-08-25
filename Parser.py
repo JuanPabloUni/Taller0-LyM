@@ -80,6 +80,23 @@ def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
   return valor_verdad  
    
 def comparardrop(lineas:str, indice:int)->tuple:
+  indice2= indice
+  sintaxis = False
+  palabra =""
+  if lineas[indice2+1]=="(":
+    while indice3 <= indice3+2 :
+      for indicevar in variables:
+        for indicepar on parametros:
+          indice3 = indice2+1
+          palabra+=lineas[indice3]
+            if  palabra== indicepar or palabra == indicevar or isDigit(palabra)==True:
+            longitudactual = lineas[indice3+len(palabra)]
+              if lineas[len(longitudactual)+1]==")"
+                sintaxis = True
+    indice3+=1
+  longitud = len(longitudactual+1)
+  tupla =(longitud,sintaxis)
+  return tupla
   pass
 def compararwalkmultiple(lineas:str, indice:int)->tuple:
   pass
@@ -100,7 +117,7 @@ def compararjump(lineas:str, indice:int)->tuple:
     indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
-  return 
+  return tupla
     
   pass
 def compararjumpTo(lineas:str, indice:int)->tuple:
