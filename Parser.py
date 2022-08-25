@@ -87,9 +87,12 @@ def compararjump(lineas:str, indice:int)->tuple:
     for indicevar in variables:
       for indicepar on parametros:
         if lineas[indice+2] == indicepar or lineas[indice+2] == indicevar or type(lineas[indice+2])==int:
-          
-    
-  else:
+          variable = lineas[indice+2]
+          if lineas[indice+3]==")"
+          sintaxis = True
+  longitud = len(variable)
+  tupla =(indice+2+longitud,sintaxis)
+  return 
     
   pass
 def compararjumpTo(lineas:str, indice:int)->tuple:
