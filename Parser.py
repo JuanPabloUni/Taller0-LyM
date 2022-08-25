@@ -149,7 +149,7 @@ def compararwalkcompuesto(lineas, indice)->tuple:
               for indicevar in variables:
                 for indicepar in parametros:
                   if  palabra2 == indicepar or palabra2 == indicevar or isDigit(palabra2)==True:
-                    longitudactual3 = lineas[longitud actual+len(palabra2)]
+                    longitudactual3 = lineas[longitudactual+len(palabra2)]
                     if lineas[len(longitudactual3)+1]==")":
                       sintaxis = True
     indice3+=1
