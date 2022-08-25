@@ -111,9 +111,6 @@ def compararwalkmultiple(lineas:str, indice:int)->tuple:
   return tupla
 
 def compararwalksimple(lineas, indice)->tuple:
-  
-
-def compararwalksimple(lineas, indice)->tuple:
   indice2= indice
   sintaxis = False
   palabra =""
@@ -131,6 +128,9 @@ def compararwalksimple(lineas, indice)->tuple:
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
+
+def compararwalkcompuesto(lineas, indice)->tuple:
+
 
 def compararjump(lineas:str, indice:int)->tuple:
   indice2= indice
