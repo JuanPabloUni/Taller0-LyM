@@ -278,9 +278,9 @@ def compararfree(lineas:str, indice:int)->tuple:
   return tupla
 
 def compararpop(lineas:str, indice:int)->tuple:
-  indice2= indice
+  indice2 = indice
   sintaxis = False
-  palabra =""
+  palabra = ""
   indice3 = indice2+1
   if lineas[indice2+1]=="(":
     while indice3 <= indice3+2 :
@@ -302,8 +302,12 @@ def compararisValid(lineas:str, indice:int)->tuple:
   pass
 def compararcanwalkmultiple(lineas:str, indice:int)->tuple:
   pass
+
 def compararnot(lineas:str, indice:int)->tuple:
+  if lineas[indice+1] == "(":
+    pass
   pass
+
 def compararPROG(lineas:str, indice:int)->tuple:
   pass  
 def compararPROC(lineas:str, indice:int)->tuple:
