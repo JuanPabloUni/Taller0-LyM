@@ -16,7 +16,7 @@ def Parser()->bool:
   for line in file:
     lineas.append(line)
    """
-   
+
   lineas = file.read().replace("\n", " ")
   file.close()
   lineas.strip()
@@ -40,7 +40,7 @@ def recorrer(lineas:str)->bool:
     indice+=1
     
 def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
-  tuplaverdadindice=(False,0)
+  tuplaverdadindice=(False, 0)
   if palabra == "drop":
     tuplaverdadindice=comparardrop(lineas, indice)
   elif palabra == "walkm":
@@ -84,11 +84,22 @@ def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
   elif palabra == "repeatTimes":
     tuplaverdadindice=compararrepeatTimes(lineas, indice)
   else:
-    valor_verdad=False
-  return valor_verdad
+    tuplaverdadindice[0]=False
+  return tuplaverdadindice
 
 def compararcondicionales(palabra:str, indice:int, lineas:str)->tuple:
   tuplaverdadindice=(False,0)
+  if palabra == "isfacing":
+    tuplaverdadindice=compararisfacing(lineas, indice)
+  elif palabra == "isValid":
+    tuplaverdadindice=compararisValid(lineas, indice)
+  elif palabra == "canWalk":
+    tuplaverdadindice=compararcanwalkmultiple(lineas, indice)
+  elif palabra == "not":
+    tuplaverdadindice=compararnot(lineas, indice)
+  else:
+    tuplaverdadindice[0]=False
+  return tuplaverdadindice
 
 def comparardrop(lineas:str, indice:int)->tuple:
   indice2= indice
