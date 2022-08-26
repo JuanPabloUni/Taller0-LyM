@@ -369,7 +369,34 @@ def compararisValid(lineas:str, indice:int)->tuple:
   pass
 
 def compararcanwalkmultiple(lineas:str, indice:int)->tuple:
-  pass
+  """
+  indice2= indice
+  sintaxis = False
+  palabra =""
+  palabra2=""
+  indice3 = indice2+1
+  if lineas[indice2+1]=="(":
+    while indice3 <= indice3+5 :
+      for indicewalk in walk:
+        palabra+=lineas[indice3]
+        if palabra == indicewalk:
+          longitudactual = lineas[indice3+len(palabra)]
+          if lineas[len(longitudactual)+1]==",":
+            longitudactual_2+=1
+            while longitudactual_2<=longitudactual+1:
+              palabra2+=lineas[longitudactual]
+              for indicevar in variables:
+                for indicepar in parametros:
+                  if palabra2 == indicepar or palabra2 == indicevar or palabra2.isdigit() == True:
+                    longitudactual3 = lineas[longitudactual+len(palabra2)]
+                    if lineas[len(longitudactual3)+1]==")":
+                      sintaxis = True
+              longitudactual_2+=1          
+      indice3+=1
+  longitud = len(longitudactual3+1)
+  tupla =(longitud,sintaxis)
+  return tupla
+  """
 
 def compararnot(lineas:str, indice:int)->tuple:
   if lineas[indice+1] == "(":
