@@ -409,7 +409,7 @@ def compararPROG(lineas:str, indice:int)->tuple:
   sintax = False
   if indice ==4:
     sintax=True
-  tupla =(indice,sintaxis)
+  tupla =(indice,sintax)
   return tupla
 
 def compararPROC(lineas:str, indice:int)->tuple:
@@ -427,7 +427,7 @@ def compararGORP(lineas:str, indice:int)->tuple:
   longitud = len(lineas)
   if indice ==longitud:
     sintax=True
-  tupla =(indice,sintaxis)
+  tupla =(indice,sintax)
   return tupla
 
 def compararwhile(lineas:str, indice:int)->tuple:
