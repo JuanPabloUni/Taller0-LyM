@@ -420,7 +420,12 @@ def compararif(lineas:str, indice:int)->tuple:
   pass
 
 def compararGORP(lineas:str, indice:int)->tuple:
-  pass
+  sintax = False
+  longitud = len(lineas)
+  if indice ==longitud:
+    sintax=True
+  tupla =(indice,sintaxis)
+  return tupla
 
 def compararwhile(lineas:str, indice:int)->tuple:
   sintaxis = False
