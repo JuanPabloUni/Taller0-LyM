@@ -403,11 +403,16 @@ def compararnot(lineas:str, indice:int)->tuple:
   pass
 
 def compararPROG(lineas:str, indice:int)->tuple:
-  pass
+  sintax = False
+  if indice ==4:
+    sintax=True
+  tupla =(indice,sintaxis)
+  return tupla
 
 def compararPROC(lineas:str, indice:int)->tuple:
   pass
 
+  
 def comparargo(lineas:str, indice:int)->tuple:
   pass
 
