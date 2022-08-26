@@ -5,6 +5,7 @@ condiciones =["isfacing", "isValid", "canWalk", "not"]
 variables=[]
 parametros=[]
 walk=["north", "south", "east", "west","right", "left", "front", "back"]
+facing=["north", "south", "east", "west"]
 listaveer=["right", "left","around"]
 
 #Main method, which opens and reads the .txt file and calls upon all other methods and prints the final result.
@@ -347,7 +348,22 @@ def compararpop(lineas:str, indice:int)->tuple:
   return tupla
 
 def compararisfacing(lineas:str, indice:int)->tuple:
-  pass
+  indice2= indice
+  sintaxis = False
+  palabra =""
+  indice3 = indice2+1
+  if lineas[indice2+1]=="(":
+    while indice3 <= indice3+5 :
+      for indiceface in facing:
+        palabra+=lineas[indice3]
+        if palabra == indiceface:
+          longitudactual = lineas[indice3+len(palabra)]
+          if lineas[len(longitudactual)+1]==")":
+            sintaxis = True
+      indice3+=1
+  longitud = len(longitudactual+1)
+  tupla =(longitud,sintaxis)
+  return tupla
 
 def compararisValid(lineas:str, indice:int)->tuple:
   pass
