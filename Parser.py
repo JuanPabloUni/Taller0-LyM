@@ -60,7 +60,7 @@ def recorrer(lineas:str)->bool:
             if indice2+1==",":
                 variables.append(palabra)
                 indice2+=len(palabra)
-            elif indice2-1=="," and indice2+1==")":
+            elif indice2-1=="," and indice2+1==";":
                 variables.append(palabra)
                 indice2+=len(palabra)
             indice2+=1
