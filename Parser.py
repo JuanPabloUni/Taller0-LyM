@@ -52,9 +52,6 @@ def recorrer(lineas:str)->bool:
         palabra=""
         indice += resultado[1]
         flag = resultado[0]
-      if indice-1=="C" and indice-2=="O" and indice-3=="R" and indice-4=="P" and indice+1=="(":
-        metodos.append(palabra)
-        indice+=len(palabra)
       elif indice-1=="r" and indice-2=="a" and indice-3=="v":
         indice2=indice
         palabra2 =""
