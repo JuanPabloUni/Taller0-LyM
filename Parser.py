@@ -7,8 +7,9 @@ walk=["north", "south", "east", "west","right", "left", "front", "back"]
 listaveer=["right", "left","around"]
 
 def Parser()->bool:
-  path = input("\nPorfavor digite el path del archivo: ")
+  path = input("\nPlease type the file path to parse: ")
   file = open(path, "r")
+  output = True
 
   """
   codigo anterior, el que esta fuera ahora lee todo el archivo en string
@@ -22,9 +23,9 @@ def Parser()->bool:
   lineas.strip()
   output = recorrer(lineas)
   if(output==True):
-    print("The program is written correctly.")
+    print("\nThe program is written correctly.\n")
   else:
-    print("The program is written incorrectly. Sintax error.")
+    print("\nThe program is written incorrectly. Sintax error.\n")
 
 def recorrer(lineas:str)->bool:
   palabra = ""
@@ -372,5 +373,5 @@ def compararrepeatTimes(lineas:str, indice:int)->tuple:
 # for line in file:
 #   print(line)
 
-print("\nBienvenido al parser de programas de Java\n")
+print("\n---Welcome to the Java Program Parser---")
 Parser()
