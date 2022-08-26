@@ -415,7 +415,6 @@ def compararPROG(lineas:str, indice:int)->tuple:
 def compararPROC(lineas:str, indice:int)->tuple:
   pass
 
-  
 def comparargo(lineas:str, indice:int)->tuple:
   pass
 
