@@ -7,25 +7,31 @@ walk=["north", "south", "east", "west","right", "left", "front", "back"]
 listaveer=["right", "left","around"]
 
 def Parser()->bool:
-  path = input("\nPlease type the file path to parse: ")
-  file = open(path, "r")
-  output = True
+  try:
 
-  """
-  codigo anterior, el que esta fuera ahora lee todo el archivo en string
-  lineas=[]
-  for line in file:
-    lineas.append(line)
-   """
+    path = input("\nPlease type the file path to parse: ")
+    file = open(path, "r")
+    output = True
 
-  lineas = file.read().replace("\n", " ")
-  file.close()
-  lineas.strip()
-  output = recorrer(lineas)
-  if(output==True):
-    print("\nThe program is written correctly.\n")
-  else:
-    print("\nThe program is written incorrectly. Sintax error.\n")
+    """
+    codigo anterior, el que esta fuera ahora lee todo el archivo en string
+    lineas=[]
+    for line in file:
+      lineas.append(line)
+    """
+
+    lineas = file.read().replace("\n", " ")
+    file.close()
+    lineas.strip()
+    output = recorrer(lineas)
+    if(output==True):
+      print("\nThe program is written correctly.\n")
+    else:
+      print("\nThe program is written incorrectly. Sintax error.\n")
+  
+  except FileNotFoundError:
+    print("\nFile not found. Please try again.")
+    Parser()
 
 def recorrer(lineas:str)->bool:
   palabra = ""
