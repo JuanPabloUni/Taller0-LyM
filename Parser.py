@@ -9,12 +9,14 @@ listaveer=["right", "left","around"]
 def Parser()->bool:
   path = input("\nPorfavor digite el path del archivo: ")
   file = open(path, "r")
+
   """
   codigo anterior, el que esta fuera ahora lee todo el archivo en string
   lineas=[]
   for line in file:
     lineas.append(line)
    """
+   
   lineas = file.read().replace("\n", " ")
   file.close()
   lineas.strip()
