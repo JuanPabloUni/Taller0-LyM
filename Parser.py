@@ -136,7 +136,7 @@ def comparardrop(lineas:str, indice:int)->tuple:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
-    indice3+=1
+      indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
@@ -167,7 +167,7 @@ def compararwalksimple(lineas, indice)->tuple:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
                 sintaxis = True
-    indice3+=1
+      indice3+=1
   longitud = len(longitudactual+1)
   tupla = (longitud,sintaxis)
   return tupla
@@ -194,7 +194,8 @@ def compararwalkcompuesto(lineas, indice)->tuple:
                     longitudactual3 = lineas[longitudactual+len(palabra2)]
                     if lineas[len(longitudactual3)+1]==")":
                       sintaxis = True
-    indice3+=1
+              longitudactual_2+=1          
+      indice3+=1
   longitud = len(longitudactual3+1)
   tupla =(longitud,sintaxis)
   return tupla
@@ -213,7 +214,7 @@ def compararjump(lineas:str, indice:int)->tuple:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
-    indice3+=1
+      indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
@@ -283,7 +284,7 @@ def comparargrab(lineas:str, indice:int)->tuple:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
-    indice3+=1
+      indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
@@ -302,7 +303,7 @@ def compararget(lineas:str, indice:int)->tuple:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
-    indice3+=1
+      indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
@@ -321,7 +322,7 @@ def compararfree(lineas:str, indice:int)->tuple:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
-    indice3+=1
+      indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
@@ -340,7 +341,7 @@ def compararpop(lineas:str, indice:int)->tuple:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
-    indice3+=1
+      indice3+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
