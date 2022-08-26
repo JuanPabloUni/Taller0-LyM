@@ -250,7 +250,7 @@ def compararjumpTo(lineas:str, indice:int)->tuple:
             palabra2+=lineas[indice4]
             if palabra == indicepar or palabra == indicevar or palabra.isdigit() == True:
               longitudactual = lineas[indice4+len(palabra2)]   
-                sintaxis = True
+              sintaxis = True
         indice4+=1
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
