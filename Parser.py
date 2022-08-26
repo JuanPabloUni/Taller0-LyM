@@ -1,3 +1,4 @@
+#Lists containing all of the possible reserved words, methods and conditionals in the program in question.
 alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else", "around"]
 metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free", "pop", "PROC", "do", "go",  "if", "GORP", "while", "repeatTimes"]
 condiciones =["isfacing", "isValid", "canWalk", "not"]
@@ -6,6 +7,7 @@ parametros=[]
 walk=["north", "south", "east", "west","right", "left", "front", "back"]
 listaveer=["right", "left","around"]
 
+#Main method, which opens and reads the .txt file and calls upon all other methods and prints the final result.
 def Parser()->bool:
   try:
 
@@ -33,6 +35,7 @@ def Parser()->bool:
     print("\nFile not found. Please try again.")
     Parser()
 
+#Method used to go over the whole .txt file in String form, calling the methods that verify sintax.
 def recorrer(lineas:str)->bool:
   palabra = ""
   indice=0
@@ -49,7 +52,8 @@ def recorrer(lineas:str)->bool:
     indice+=1
   
   return flag
-    
+
+#Method used to determine which reserved word is identified and call the corresponding verifier.
 def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
   tuplaverdadindice=(False, 0)
   if palabra == "drop":
@@ -95,11 +99,12 @@ def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
   elif palabra == "repeatTimes":
     tuplaverdadindice=compararrepeatTimes(lineas, indice)
   else:
-    x = list(tuplaverdadindice)
-    x[0]=False
-    tuplaverdadindice = tuple(x)
+    tuplelist = list(tuplaverdadindice)
+    tuplelist[0]=False
+    tuplaverdadindice = tuple(tuplelist)
   return tuplaverdadindice
 
+#Method used to determine which conditional is identified and call the corresponding verifier.
 def compararcondicionales(palabra:str, indice:int, lineas:str)->tuple:
   tuplaverdadindice=(False,0)
   if palabra == "isfacing":
@@ -111,11 +116,12 @@ def compararcondicionales(palabra:str, indice:int, lineas:str)->tuple:
   elif palabra == "not":
     tuplaverdadindice=compararnot(lineas, indice)
   else:
-    x = list(tuplaverdadindice)
-    x[0]=False
-    tuplaverdadindice = tuple(x)
+    tuplelist = list(tuplaverdadindice)
+    tuplelist[0]=False
+    tuplaverdadindice = tuple(tuplelist)
   return tuplaverdadindice
 
+#Methods used to individually asses the the sintax of every declared method in the .txt file.
 def comparardrop(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
@@ -313,8 +319,10 @@ def compararpop(lineas:str, indice:int)->tuple:
 
 def compararisfacing(lineas:str, indice:int)->tuple:
   pass
+
 def compararisValid(lineas:str, indice:int)->tuple:
   pass
+
 def compararcanwalkmultiple(lineas:str, indice:int)->tuple:
   pass
 
@@ -324,13 +332,17 @@ def compararnot(lineas:str, indice:int)->tuple:
   pass
 
 def compararPROG(lineas:str, indice:int)->tuple:
-  pass  
+  pass
+
 def compararPROC(lineas:str, indice:int)->tuple:
   pass
+
 def comparargo(lineas:str, indice:int)->tuple:
-  pass  
+  pass
+
 def compararif(lineas:str, indice:int)->tuple:
-  pass  
+  pass
+
 def compararGORP(lineas:str, indice:int)->tuple:
   pass
 
@@ -352,6 +364,13 @@ def compararwhile(lineas:str, indice:int)->tuple:
 
 def compararrepeatTimes(lineas:str, indice:int)->tuple:
   pass
+
+#Lines of code which call upon the main method and start the parser method as a whole.
+print("\n---Welcome to the Java Program Parser---")
+Parser()
+
+
+
 
 #       # estructuras si no esta sacar el nombre e ir a posicion y evaluar
 #                 """ 
@@ -382,6 +401,3 @@ def compararrepeatTimes(lineas:str, indice:int)->tuple:
 # file = open("Text.txt", "r")
 # for line in file:
 #   print(line)
-
-print("\n---Welcome to the Java Program Parser---")
-Parser()
