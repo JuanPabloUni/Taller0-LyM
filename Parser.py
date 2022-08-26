@@ -369,7 +369,6 @@ def compararisValid(lineas:str, indice:int)->tuple:
   pass
 
 def compararcanwalkmultiple(lineas:str, indice:int)->tuple:
-  """
   indice2= indice
   sintaxis = False
   palabra =""
@@ -396,7 +395,7 @@ def compararcanwalkmultiple(lineas:str, indice:int)->tuple:
   longitud = len(longitudactual3+1)
   tupla =(longitud,sintaxis)
   return tupla
-  """
+
 
 def compararnot(lineas:str, indice:int)->tuple:
   if lineas[indice+1] == "(":
