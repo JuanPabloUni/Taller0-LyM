@@ -92,10 +92,8 @@ def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
     tuplaverdadindice=compararPROG(lineas, indice)
   elif palabra == "PROC":
     tuplaverdadindice=compararPROC(lineas, indice)
-    """
   elif palabra == "go":
     tuplaverdadindice=comparargo(lineas, indice)
-    """
   elif palabra == "if":
     tuplaverdadindice=compararif(lineas, indice)
   elif palabra == "GORP":
@@ -417,10 +415,9 @@ def compararPROG(lineas:str, indice:int)->tuple:
 def compararPROC(lineas:str, indice:int)->tuple:
   pass
 
-  """
+  
 def comparargo(lineas:str, indice:int)->tuple:
   pass
-  """
 
 def compararif(lineas:str, indice:int)->tuple:
   pass
