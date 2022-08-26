@@ -426,6 +426,23 @@ def compararPROG(lineas:str, indice:int)->tuple:
   return tupla
 
 def compararPROC(lineas:str, indice:int)->tuple:
+  """
+    indice2=indice+1
+    palabra=""
+    indice3= 0
+    indice4=0
+  while indice2 <= len(lineas):
+    carac=lineas[indice2]
+    if indice2+1=="(":
+        indice3=indice2+len(palabra)
+        metodos.append(palabra)
+        indice2=len(indice)
+  indice3+=1
+  param=  
+  if indice3!=0:
+    while param
+    if indice3+1
+    """
   pass
 
 def comparargo(lineas:str, indice:int)->tuple:
