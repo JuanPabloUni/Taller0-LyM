@@ -28,11 +28,11 @@ def recorrer(lineas:str)->str:
     for indicea in range(len(metodos)):
       token = metodos[indicea]
       if palabra in token:
-        resultado=comparadormetodos(palabra, indice, lineas)
+        resultado=compararmetodos(palabra, indice, lineas)
         indice += resultado[1]
     indice+=1
     
-def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
+def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
   tuplaverdadindice=(False,0)
   if palabra == "drop":
     tuplaverdadindice=comparardrop(lineas, indice)
@@ -78,7 +78,11 @@ def comparadormetodos(palabra:str, indice:int, lineas:str)->tuple:
     tuplaverdadindice=compararrepeatTimes(lineas, indice)
   else:
     valor_verdad=False
-  return valor_verdad  
+  return valor_verdad
+
+def compararcondicionales(palabra:str, indice:int, lineas:str)->tuple:
+  tuplaverdadindice=(False,0)
+  
    
 def comparardrop(lineas:str, indice:int)->tuple:
   indice2= indice
@@ -175,10 +179,10 @@ def compararjump(lineas:str, indice:int)->tuple:
   longitud = len(longitudactual+1)
   tupla =(longitud,sintaxis)
   return tupla
-    
-  pass
+
 def compararjumpTo(lineas:str, indice:int)->tuple:
   pass
+
 def compararveer(lineas:str, indice:int)->tuple:
   sintaxis = False
   indice2=indice+1
@@ -194,9 +198,11 @@ def compararveer(lineas:str, indice:int)->tuple:
       indice2+=1    
   longitud = len(longitudtemp+1)
   tupla =(longitud,sintaxis)
-  pass
+  return tupla
+
 def compararlook(lineas:str, indice:int)->tuple:
   pass
+
 def comparargrab(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
@@ -264,7 +270,7 @@ def compararpop(lineas:str, indice:int)->tuple:
       for indicevar in variables:
         for indicepar in parametros:
           palabra+=lineas[indice3]
-          if palabra== indicepar or palabra == indicevar or palabra.isdigit() == True:
+          if palabra == indicepar or palabra == indicevar or palabra.isdigit() == True:
             longitudactual = lineas[indice3+len(palabra)]
             if lineas[len(longitudactual)+1]==")":
               sintaxis = True
@@ -303,7 +309,7 @@ def compararwhile(lineas:str, indice:int)->tuple:
       palabra+=lineas[indice]
       if(palabra in condiciones):
         flag = True
-        sintaxis = compararcondicionales(lineas, indice, palabra)
+        sintaxis = compararcondicionales(palabra, indice, lineas)
       indice+=1
   else:
     sintaxis = False
