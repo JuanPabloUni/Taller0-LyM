@@ -67,7 +67,8 @@ def recorrer(lineas:str)->bool:
                 metodosnoconocidos.append(palabra)
                 indice2+=len(palabra)
             indice2+=1
-        indice+=indice2
+        diferencia=indice2-indice
+        indice+=diferencia
     indice+=1
   
   return flag
