@@ -18,8 +18,13 @@ def Parser()->bool:
   lineas = file.read().replace("\n", " ")
   file.close()
   lineas.strip()
+  output = recorrer(lineas)
+  if(output==True):
+    print("The program is written correctly.")
+  else:
+    print("The program is written incorrectly. Sintax error.")
 
-def recorrer(lineas:str)->str:
+def recorrer(lineas:str)->bool:
   palabra = ""
   indice=0
   while indice <= len(lineas):
@@ -82,8 +87,7 @@ def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
 
 def compararcondicionales(palabra:str, indice:int, lineas:str)->tuple:
   tuplaverdadindice=(False,0)
-  
-   
+
 def comparardrop(lineas:str, indice:int)->tuple:
   indice2= indice
   sintaxis = False
