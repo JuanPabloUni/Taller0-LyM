@@ -219,7 +219,35 @@ def compararjump(lineas:str, indice:int)->tuple:
   return tupla
 
 def compararjumpTo(lineas:str, indice:int)->tuple:
-  pass
+  indice2= indice
+  sintaxis = False
+  palabra =""
+  indice3 = indice2+1
+  longitudactual=0
+  indice4=0
+  palabra2=""
+  if lineas[indice2+1]=="(":
+    while indice3 <= indice3+2 :
+      for indicevar in variables:
+        for indicepar in parametros:
+          palabra+=lineas[indice3]
+          if palabra == indicepar or palabra == indicevar or palabra.isdigit() == True:
+            longitudactual = lineas[indice3+len(palabra)]
+      indice3+=1
+  if longitudactual!=0:          
+    if lineas[len(longitudactual)+1]==",":
+      indice4=longitudactual+1
+      while indice4<= indice4+2 :
+        for indicevar in variables:
+          for indicepar in parametros:
+            palabra2+=lineas[indice4]
+            if palabra == indicepar or palabra == indicevar or palabra.isdigit() == True:
+              longitudactual = lineas[indice4+len(palabra2)]   
+                sintaxis = True
+        indice4+=1
+  longitud = len(longitudactual+1)
+  tupla =(longitud,sintaxis)
+  return tupla
 
 def compararveer(lineas:str, indice:int)->tuple:
   sintaxis = False
