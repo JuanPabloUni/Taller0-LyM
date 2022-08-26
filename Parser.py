@@ -2,6 +2,7 @@
 alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else", "around"]
 metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free", "pop", "PROC", "do", "go",  "if", "GORP", "while", "repeatTimes"]
 condiciones =["isfacing", "isValid", "canWalk", "not"]
+metodosnoconocidos=[]
 variables=[]
 parametros=[]
 walk=["north", "south", "east", "west","right", "left", "front", "back"]
@@ -50,6 +51,8 @@ def recorrer(lineas:str)->bool:
         resultado=compararmetodos(palabra, indice, lineas)
         indice += resultado[1]
         flag = resultado[0]
+      if indice-1=="C" and indice-2=="O" and indice-3=="P" and indice+1=="(":
+        metodosnoconocidos.append(palabra)
     indice+=1
   
   return flag
