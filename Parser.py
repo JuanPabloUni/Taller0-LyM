@@ -30,7 +30,8 @@ def Parser()->bool:
 def recorrer(lineas:str)->bool:
   palabra = ""
   indice=0
-  while indice < len(lineas):
+  flag=True
+  while indice < len(lineas) and flag:
     caracter = lineas[indice]
     palabra+caracter
     for indicea in range(len(metodos)):
@@ -38,7 +39,10 @@ def recorrer(lineas:str)->bool:
       if palabra in token:
         resultado=compararmetodos(palabra, indice, lineas)
         indice += resultado[1]
+        flag = resultado[0]
     indice+=1
+  
+  return flag
     
 def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
   tuplaverdadindice=(False, 0)
