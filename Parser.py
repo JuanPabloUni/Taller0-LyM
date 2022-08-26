@@ -47,7 +47,7 @@ def recorrer(lineas:str)->bool:
     palabra+caracter
     for indicea in range(len(metodos)):
       token = metodos[indicea]
-      if palabra in token:
+      if palabra == token:
         resultado=compararmetodos(palabra, indice, lineas)
         palabra=""
         indice += resultado[1]
