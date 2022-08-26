@@ -49,10 +49,25 @@ def recorrer(lineas:str)->bool:
       token = metodos[indicea]
       if palabra in token:
         resultado=compararmetodos(palabra, indice, lineas)
+        palabra=""
         indice += resultado[1]
         flag = resultado[0]
-      if indice-1=="C" and indice-2=="O" and indice-3=="P" and indice+1=="(":
+      if indice-1=="C" and indice-2=="O" and indice-3=="R" and indice-4=="P" and indice+1=="(":
         metodosnoconocidos.append(palabra)
+        indice+=len(palabra)
+      elif indice-1=="r" and indice-2=="a" and indice-3=="v":
+        indice2=indice
+        palabra2 =""
+        while indice2< len(lineas):
+            palabra+=lineas[indice2]
+            if indice2+1==",":
+                metodosnoconocidos.append(palabra)
+                indice2+=len(palabra)
+            elif indice2-1=="," and indice2+1==")":
+                metodosnoconocidos.append(palabra)
+                indice2+=len(palabra)
+            indice2+=1
+        indice+=indice2
     indice+=1
   
   return flag
