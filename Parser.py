@@ -29,7 +29,7 @@ def Parser()->bool:
 def recorrer(lineas:str)->bool:
   palabra = ""
   indice=0
-  while indice <= len(lineas):
+  while indice < len(lineas):
     caracter = lineas[indice]
     palabra+caracter
     for indicea in range(len(metodos)):
