@@ -84,7 +84,9 @@ def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
   elif palabra == "repeatTimes":
     tuplaverdadindice=compararrepeatTimes(lineas, indice)
   else:
-    tuplaverdadindice[0]=False
+    x = list(tuplaverdadindice)
+    x[0]=False
+    tuplaverdadindice = tuple(x)
   return tuplaverdadindice
 
 def compararcondicionales(palabra:str, indice:int, lineas:str)->tuple:
@@ -98,7 +100,9 @@ def compararcondicionales(palabra:str, indice:int, lineas:str)->tuple:
   elif palabra == "not":
     tuplaverdadindice=compararnot(lineas, indice)
   else:
-    tuplaverdadindice[0]=False
+    x = list(tuplaverdadindice)
+    x[0]=False
+    tuplaverdadindice = tuple(x)
   return tuplaverdadindice
 
 def comparardrop(lineas:str, indice:int)->tuple:
