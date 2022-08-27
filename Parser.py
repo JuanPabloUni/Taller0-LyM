@@ -1,6 +1,6 @@
 #Lists containing all of the possible reserved words, methods and conditionals in the program in question.
 alfabeto = ["drop", "free", "walk", "var", "PROC", "canWalk", "do", "walk", "od", "fi", "go", "GORP", "(", ")", "{", "}", ",", ".", ";", "north", "south", "east", "west", "right", "left", "front", "back", "jump", "jumpTo", "veer", "look", "grab", "get", "pop", "if", "else", "around"]
-metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free", "pop", "PROC", "do", "go",  "if", "GORP", "while", "repeatTimes"]
+metodos=["drop", "walk", "jump", "jumpTo", "veer", "look", "grab", "get", "free", "pop", "PROC", "do", "go",  "if", "while", "repeatTimes"]
 condiciones =["isfacing", "isValid", "canWalk", "not"]
 metodosnoconocidos=[]
 variables=[]
@@ -424,14 +424,14 @@ def compararnot(lineas:str, indice:int)->tuple:
   if lineas[indice+1] == "(":
     pass
   pass
-
+"""
 def compararPROG(lineas:str, indice:int)->tuple:
   sintax = False
   if indice ==4:
     sintax=True
   tupla =(indice,sintax)
   return tupla
-
+"""
 def compararPROC(lineas:str, indice:int)->tuple:
   """
     indice2=indice+1
@@ -457,7 +457,7 @@ def comparargo(lineas:str, indice:int)->tuple:
 
 def compararif(lineas:str, indice:int)->tuple:
   pass
-
+"""
 def compararGORP(lineas:str, indice:int)->tuple:
   sintax = False
   longitud = len(lineas)
@@ -465,7 +465,7 @@ def compararGORP(lineas:str, indice:int)->tuple:
     sintax=True
   tupla =(indice,sintax)
   return tupla
-
+"""
 def compararwhile(lineas:str, indice:int)->tuple:
   sintaxis = False
   flag = False
