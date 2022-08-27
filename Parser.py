@@ -42,6 +42,14 @@ def recorrer(lineas:str)->bool:
   palabra = ""
   indice=0
   flag=True
+
+  if lineas[0]=="P" and lineas[1]=="R" and lineas[2]=="O" and lineas[3]=="G":
+      if lineas[-1]=="P" and lineas[-2]=="R" and lineas[-3]=="O" and lineas[-4]=="G":
+          flag=True
+      else:
+          flag=False
+  else:
+      flag=False 
   while indice < len(lineas)-1 and flag:
     caracter = lineas[indice]
     palabra+=caracter
@@ -66,9 +74,8 @@ def recorrer(lineas:str)->bool:
             indice2+=1
         diferencia=indice2-indice
         indice+=diferencia
-    indice+=1
-  
-  return flag
+    indice+=1 
+    return flag
 
 #Method used to determine which reserved word is identified and call the corresponding verifier.
 def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
