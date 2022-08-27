@@ -43,14 +43,15 @@ def recorrer(lineas:str)->bool:
   indice=0
   flag=True
 
-  if lineas[0]=="P" and lineas[1]=="R" and lineas[2]=="O" and lineas[3]=="G":
-      if lineas[-1]=="P" and lineas[-2]=="R" and lineas[-3]=="O" and lineas[-4]=="G":
-          flag=True
-      else:
-          flag=False
+  if lineas[0]=="P" and lineas[1]=="R" and lineas[2]=="O" and lineas[3]=="G":  
+    if lineas[-1]=="P" and lineas[-2]=="R" and lineas[-3]=="O" and lineas[-4]=="G":
+        flag=True
+    else:
+        flag=False
   else:
       flag=False
-      
+
+  indice =4    
   while indice < len(lineas)-5 and flag:
     caracter = lineas[indice]
     palabra+=caracter
@@ -109,15 +110,19 @@ def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
     tuplaverdadindice=compararcanwalkmultiple(lineas, indice)
   elif palabra == "not":
     tuplaverdadindice=compararnot(lineas, indice)
+    """
   elif palabra == "PROG":
     tuplaverdadindice=compararPROG(lineas, indice)
+    """
   elif palabra == "PROC":
     tuplaverdadindice=compararPROC(lineas, indice)
   elif palabra == "go":
     tuplaverdadindice=comparargo(lineas, indice)
   elif palabra == "if":
+    """
     tuplaverdadindice=compararif(lineas, indice)
   elif palabra == "GORP":
+    """
     tuplaverdadindice=compararGORP(lineas, indice)
   elif palabra == "while":
     tuplaverdadindice=compararwhile(lineas, indice)
