@@ -52,31 +52,19 @@ def recorrer(lineas:str)->bool:
       flag=False
 
   indice =4    
-  while indice < len(lineas)-5 and flag:
-    caracter = lineas[indice]
-    palabra+=caracter
-    for indicea in range(len(metodos)):
-      token = metodos[indicea]
-      if palabra == token:
-        resultado=compararmetodos(palabra, indice, lineas)
-        palabra=""
-        indice += resultado[1]
-        flag = resultado[0]
-      elif indice-1=="r" and indice-2=="a" and indice-3=="v":
-        indice2=indice
-        palabra2 =""
-        while indice2< len(lineas):
-            palabra+=lineas[indice2]
-            if indice2+1==",":
-                variables.append(palabra)
-                indice2+=len(palabra)
-            elif indice2-1=="," and indice2+1==";":
-                variables.append(palabra)
-                indice2+=len(palabra)
+      while indice2< len(lineas)-5: 
+        palabra2+=lineas[indice2]
+          if lineas[indice2+1]==",":
+            variables.append(palabra2)
+            palabra2=""
             indice2+=1
-        diferencia=indice2-indice
-        indice+=diferencia
-    indice+=1 
+          elif lineas[indice2-1]=="," and lineas[indice2+1]==";":
+            variables.append(palabra2)
+            palabra2=""     
+        indice2+=1  
+      diferencia=indice2-indice
+      indice+=diferencia
+    indice+=1
   return flag
 
 #Method used to determine which reserved word is identified and call the corresponding verifier.
