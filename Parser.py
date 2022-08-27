@@ -49,8 +49,9 @@ def recorrer(lineas:str)->bool:
       else:
           flag=False
   else:
-      flag=False 
-  while indice < len(lineas)-1 and flag:
+      flag=False
+      
+  while indice < len(lineas)-5 and flag:
     caracter = lineas[indice]
     palabra+=caracter
     for indicea in range(len(metodos)):
