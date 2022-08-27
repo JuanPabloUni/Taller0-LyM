@@ -52,19 +52,19 @@ def recorrer(lineas:str)->bool:
       flag=False
 
   indice =4    
-      while indice2< len(lineas)-5: 
-        palabra2+=lineas[indice2]
-          if lineas[indice2+1]==",":
-            variables.append(palabra2)
-            palabra2=""
-            indice2+=1
-          elif lineas[indice2-1]=="," and lineas[indice2+1]==";":
-            variables.append(palabra2)
-            palabra2=""     
-        indice2+=1  
-      diferencia=indice2-indice
-      indice+=diferencia
-    indice+=1
+  while indice2< len(lineas)-5: 
+    palabra2+=lineas[indice2]
+    if lineas[indice2+1]==",":
+      variables.append(palabra2)
+      palabra2=""
+      indice2+=1
+    elif lineas[indice2-1]=="," and lineas[indice2+1]==";":
+      variables.append(palabra2)
+      palabra2=""     
+  indice2+=1  
+  diferencia=indice2-indice
+  indice+=diferencia
+  indice+=1
   return flag
 
 #Method used to determine which reserved word is identified and call the corresponding verifier.
@@ -427,31 +427,24 @@ def compararPROG(lineas:str, indice:int)->tuple:
   return tupla
 """
 def compararPROC(lineas:str, indice:int)->tuple:
-    sintaxis = False
+  """
     indice2=indice+1
     palabra=""
-    if lineas[indice2]+1=="(":
-        indice2+=1
-        while indice2 <= len(lineas):
-            carac=lineas[indice2]
-            palabra+=carac
-            if lineas[indice2+1]==",":
-                parametros.add(palabra)
-                palabra=""
-                indice2+=1
-                indice2+=len(palabra) 
-            elif lineas[indice2+1]==")" and lineas[indice2-1]==",":
-                parametros.add(palabra)
-                palabra=""
-                indice2+=1
-                indice2+=len(palabra)
-                sintaxis = True 
-            indice2+1
-
-    longitud = indice2
-    tupla =(longitud,sintaxis)
-    return tupla
-  
+    indice3= 0
+    indice4=0
+  while indice2 <= len(lineas):
+    carac=lineas[indice2]
+    if indice2+1=="(":
+        indice3=indice2+len(palabra)
+        metodos.append(palabra)
+        indice2=len(indice)
+  indice3+=1
+  param=  
+  if indice3!=0:
+    while param
+    if indice3+1
+    """
+  pass
 def compararif(lineas:str, indice:int)->tuple:
   pass
 """
