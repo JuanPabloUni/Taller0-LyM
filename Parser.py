@@ -76,7 +76,7 @@ def recorrer(lineas:str)->bool:
         diferencia=indice2-indice
         indice+=diferencia
     indice+=1 
-    return flag
+  return flag
 
 #Method used to determine which reserved word is identified and call the corresponding verifier.
 def compararmetodos(palabra:str, indice:int, lineas:str)->tuple:
