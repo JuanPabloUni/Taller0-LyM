@@ -40,7 +40,9 @@ def Parser()->bool:
 #Method used to go over the whole .txt file in String form, calling the methods that verify sintax.
 def recorrer(lineas:str)->bool:
   palabra = ""
+  palabra2 = ""
   indice=0
+  indice2=0
   flag=True
 
   if lineas[0]=="P" and lineas[1]=="R" and lineas[2]=="O" and lineas[3]=="G":  
@@ -61,10 +63,10 @@ def recorrer(lineas:str)->bool:
     elif lineas[indice2-1]=="," and lineas[indice2+1]==";":
       variables.append(palabra2)
       palabra2=""     
-  indice2+=1  
-  diferencia=indice2-indice
-  indice+=diferencia
-  indice+=1
+    indice2+=1  
+    diferencia=indice2-indice
+    indice+=diferencia
+    indice+=1
   return flag
 
 #Method used to determine which reserved word is identified and call the corresponding verifier.
