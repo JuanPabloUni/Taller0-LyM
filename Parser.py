@@ -452,10 +452,6 @@ def compararPROC(lineas:str, indice:int)->tuple:
     if indice3+1
     """
   pass
-
-def comparargo(lineas:str, indice:int)->tuple:
-  pass
-
 def compararif(lineas:str, indice:int)->tuple:
   pass
 """
